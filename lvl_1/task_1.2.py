@@ -17,6 +17,14 @@ my_favorite_songs = [
     ['Nowhere to Run', 2.58],
     ['In This World', 4.02],
 ]
+import random
+three_random_songs = random.sample(my_favorite_songs, 3)
+print (three_random_songs)
+sum1 = 0
+for i in three_random_songs:
+    sum1 += i[1]
+
+print("Три песни звучат", round(sum1,2),"минут")
 
 # Пункт B. 
 # Есть словарь песен 
@@ -35,10 +43,21 @@ my_favorite_songs_dict = {
     'In This World': 4.02,
 }
 
+random_favorite_songs_dict = random.sample(list(my_favorite_songs_dict.items()), 3)
+
+sum2 = 0
+for i in random_favorite_songs_dict:
+    sum2 += i[1]
+
+print("Три песни звучат", round(sum2,2),"минут")
+
+
 # Дополнительно для пунктов A и B
 # Пункт C.
 # Сгенерируйте случайные песни с помощью модуля random
 # import random
+three_random_songs = random.sample(my_favorite_songs, 3)
+print (three_random_songs)
 
 # Дополнительно 
 # Пункт D.
