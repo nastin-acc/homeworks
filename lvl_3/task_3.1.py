@@ -20,6 +20,29 @@
 #  [1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
 #  [1, 1, 1, 1, 1, 1, 1, 1, 1, 1]]
 
+
+class Matrix:
+
+    def __init__(self, rows, cols, value):  
+      self.field = [[value for _ in range(cols)] for _ in range(rows)]
+      self.rows = rows
+      self.cols = cols
+      self.value = value
+
+    def get_value(self, row, col):
+      return self.field[row][col]
+
+    def set_val(self, row, col, value):
+      self.field[row][col] = value
+
+    def get_rows_quantity(self):
+      return self.rows
+
+    def get_cols_quantity(self):
+      return self.cols
+
+
+
 # Примечание! 
 #   - новый класс не запрещено строить на базе существующих типов данных: списков, словарей и тд.
 #   - отображать в таблице/матрице название колонки не обязательно!
