@@ -24,6 +24,13 @@ store = {
 }
 
 # Рассчитайте на какую сумму лежит каждого товара на складе.
+for i in store:
+  sum=0
+  quantity=0
+  for j in store[i]:
+    sum+=j["price"]*j["quantity"]
+    quantity+=j["quantity"]
+  print(list(titles.keys())[list(titles.values()).index(i)],"-",quantity,"шт,","стоимость",sum)  
 #
 # Вывести суммарную стоимость каждого товара в магазине в формате:
 # "<товар> - <кол-во> шт, стоимость <общая стоимость> руб"
